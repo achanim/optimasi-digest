@@ -1,0 +1,29 @@
+{
+  "name": "optimasi-digest",
+  "version": "1.0.4",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --external pdfmake",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch"
+  },
+ "devDependencies": {
+    "tsup": "^8.x",
+    "typescript": "^5.x",
+    "pdfmake": "^0.2.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0",
+    "pdfmake": ">=0.2.0"
+  }
+}
