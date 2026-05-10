@@ -17,13 +17,15 @@
     "build": "tsup src/index.ts --format cjs,esm --dts --external pdfmake",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch"
   },
- "devDependencies": {
+  "devDependencies": {
+    "@types/pdfmake": "^0.3.2",
+    "pdfmake": "^0.2.0",
+    "semantic-release": "^25.0.3",
     "tsup": "^8.x",
-    "typescript": "^5.x",
-    "pdfmake": "^0.2.0"
+    "typescript": "^5.x"
   },
   "peerDependencies": {
-    "typescript": ">=5.0",
-    "pdfmake": ">=0.2.0"
+    "pdfmake": ">=0.2.0",
+    "typescript": ">=5.0"
   }
 }
